@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>simon</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">  
+    
+	<script src="libraries/p5.js" type="text/javascript"></script>
+
+    <script src="libraries/p5.dom.js" type="text/javascript"></script>
+    <script src="libraries/p5.sound.js" type="text/javascript"></script>
+    <script src="libraries/p5.gif.js" type="text/javascript"></script>
+    
+    <!-- must be loaded first so constants are visible in main sketch scope -->
+    <script src="properties.js" type="text/javascript"></script>    
+    <script src="constants.js" type="text/javascript"></script>
+    
+    <script src="button.js" type="text/javascript"></script>
+    <script src="dialog.js" type="text/javascript"></script>
+    <script src="sketch.js" type="text/javascript"></script>    
+
+    <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
+  </head>
+  <body>
+    <!-- Loading Screen to wait for media dependencies from pre-load -->
+   <div id="p5_loading" class="loadingclass">
+      <img src="images/loading.gif" alt="loading animation" />
+      <p>Loading...</p>
+    </div>
+  </body>
+</html>
