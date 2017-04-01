@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<!-- work.html -->
+    <div class="text-center">
+		<h1>Work Page</h1>
+		<div class="workInputs">
+				Search: 
+					<input ng-model="query[queryBy]" />
+				Search By:        
+					<select ng-model="queryBy">
+						<option value="name">WORK NAME</option>					
+					</select>
+		</div>
+    </div>
+	
+	<div class="row">
+		<div class="col-xs-6 col-md-3 animate-repeat" ng-repeat="work in workList | filter:query"> 
+				<div class="circle-button">
+					<a ui-sref="details({workName: work.name, workId: work.id})">
+						<img src="{{work.image}}" alt="{{work.name}}" class="circle-button-img"></img>
+					</a>
+				</div>	
+			    <div class="text-center">
+					<p> {{work.name}}</p>				
+			    </div>
+		</div>
+	</div> 
+	  
+</html>

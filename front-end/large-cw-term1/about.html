@@ -1,0 +1,55 @@
+<!-- home.html -->
+    <div class="text-center">
+        <h1>About Page</h1>
+		
+<br/>
+
+I am a growing software engineer who thoroughly enjoys to learn about coding.<br />
+After finishing my A levels I embraced the opportunity to enter an IT apprenticeship to hone my skills in coding.<br />
+This enabled me to be a part of various projects working with all kinds of people.<br />
+Currently I am studying for a bachelor's degree in Computer Science at Goldsmiths University of London.<br />
+<br /><hr />
+<h2>Hobbies and likes</h2><br />
+<!--<div class="about-facts"></div>-->
+	<div class="row pad-bot">
+		<div class="col-md-6">
+				<!--https://i1.wp.com/heisarzola.com/devblog/wp-content/uploads/2016/05/Minimalism-Full-Size.jpg-->
+			 <img src="images/about/minimal-chess-bg.jpg" alt="chess" class="bordered about-img" ng-click="setView('chess.html')" ng-class="{'bordered-active':currentView == 'chess.html'}"/><!--ui-sref-active="bordered-active"  ng-class="{bordered-active:$state.includes('chess')}"-->
+		</div>
+		<div class="col-md-6">
+		 <!--http://www.meh.ro/wp-content/uploads/2015/04/meh.ro11944.png-->
+			  <img src="images/about/minimal-horror-bg.png" alt="horror" class="bordered about-img" ng-click="setView('horror.html')" ng-class="{'bordered-active':currentView == 'horror.html'}"/>
+		</div>
+	</div>
+	
+	<div class="row pad-bot">
+		<div class="col-md-6">
+		 <!--http://cdn-media-2.lifehack.org/wp-content/files/2013/04/78-1024x640.jpg-->
+			<img src="images/about/minimal-gaming-bg.jpg" alt="gaming" class="bordered about-img" ng-click="setView('gaming.html')" ng-class="{'bordered-active':currentView == 'gaming.html'}"/>
+		</div>
+		<div class="col-md-6">
+		 <!--https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/14962699_10153857199661933_5526162398027347963_n.jpg?oh=7b23a5fe93e20c2bce3c9e3e904a0851&oe=58DAAB7B-->
+			  <img src="images/about/goldsmiths-anime-society.jpg" alt="societies" class="bordered about-img" ng-click="setView('societies.html')" ng-class="{'bordered-active':currentView == 'societies.html'}"/>
+		</div>
+	</div>
+	
+	<hr />
+	  <div ng-include="currentView" class="my-fade-animation"></div>
+	<hr />
+
+
+ 
+ </div>
+ 
+ 
+<!-- In my spare time I enjoy running, going out with friends, gaming, reading, learning and working on personal coding projects.-->
+
+<!--    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+      <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide {{slide.id}}</h4>
+          <p>{{slide.text}}</p>
+        </div>
+      </div>
+    </div>-->

@@ -1,0 +1,243 @@
+html,body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body{
+	background-color:#E6E6E6;	
+}
+
+footer {
+   position:relative;
+   bottom:0;	   
+   width:100%;
+   height:10vh;   /* Height of the footer */     
+   margin-top:1vh;
+}
+
+/*inherit from the parent footer*/
+#footer-content{
+	display:table;
+	position: relative;
+	width: inherit;
+    height: inherit;
+    color:white;
+	background-color: #2c3e50;
+    font-weight: bold;  
+	text-align: center;
+}
+
+#footer-content:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#leftFooter {
+	display: inline-block;
+	vertical-align: middle;
+	width:100%;
+}
+
+#rightFooter {
+	display: inline-block;
+	vertical-align: middle;
+		width:100%;
+}
+
+.container{
+	padding-bottom:5vh;
+	min-height: 100%;
+}
+
+.breadcrumb{
+	background-color:#2c3e50;
+}
+
+.navbar{
+	border-bottom:1px solid white;
+}
+
+.navbar, .breadcrumb{
+	margin-bottom: 0px;
+	border-radius:0px;
+}
+
+/*
+Had to use padding top with position relative to simulate the height to dynamically be the same as the width
+then use absolute positioning on the contents to make it fit inside the area
+*/
+.circle-button{
+	position:relative;
+	margin: 10px;
+	width:100%;	
+	padding-top: 100%;	
+	border-radius:50%;
+	border:10px solid #d0d0d0;
+	overflow: hidden;
+}
+
+.circle-button:hover{
+	border-color:#333;
+	cursor: pointer;
+}
+
+.circle-button-img{
+	position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height:100%;
+	width:100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);	
+}
+
+.circle-button-img:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+.profile-img{
+    margin-left: auto;
+    margin-right: auto;
+	margin-bottom:20px;
+	max-width:180px;
+}
+
+.white-fa {
+  color: white;
+  padding-left:1vw; /* viewport width's 1%*/
+}
+
+.fa-facebook:hover, .fa-linkedin:hover {
+  color: #18bc9c;
+  cursor:pointer;
+}
+
+textarea{
+	resize:none;
+}
+
+.form-group .help-block {
+  display: none;
+}
+
+.form-group.has-error .help-block {
+  display: block;
+}
+
+.input-group-addon{
+	background-color: #2c3e50;
+	color:white;
+}
+.alert{
+	margin-top:10px;
+}
+.workInputs > input, select {
+	display:inline;
+	margin:10px;
+}
+
+/* 
+using ng animate to transition search results chnging opacity to give a fading effect 
+https://docs.angularjs.org/api/ngAnimate
+*/
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  opacity:0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.bordered{
+	border:10px solid #d0d0d0;
+}
+
+.bordered-active{
+	border-color:#333;
+}
+
+.about-img{
+	cursor:pointer;
+	width: 100%;
+	height: 250px;
+}
+
+.pad-bot{
+	padding-bottom:15px;
+}
+
+hr {
+	border-color: #2c3e50;
+}
+
+/* now the element will fade out before it is removed from the DOM */
+/*.my-fade-animation.ng-leave {
+  transition:1s linear all;
+  opacity:1;
+}
+.my-fade-animation.ng-leave.ng-leave-active {
+  opacity:0;
+}*/
+.my-fade-animation.ng-enter,
+.my-fade-animation.ng-leave {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+.my-fade-animation.ng-enter {
+  opacity: 0;
+}
+.my-fade-animation.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+.my-fade-animation.ng-leave {
+  opacity: 1;
+}
+.my-fade-animation.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+.icon-heading:after {
+   display: inline-block;
+}
+
+/*font awesome icon size*/
+.fa{
+	font-size:20px;
+}
+
+#basket-carousel{
+	margin-top: 10px;
+}
+
+/*Making the Carousel more readable by using black instead of default white colour*/
+
+.carousel-caption:before{
+    position:absolute;
+    z-index:-1;
+    content:"";	
+	top:20%;
+    left:40%;	
+    width:20%;
+    height:100%;
+    background-color:black;
+    opacity:0.5;	
+}

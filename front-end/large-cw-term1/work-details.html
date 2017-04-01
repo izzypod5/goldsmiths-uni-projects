@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<!-- work-details.html -->
+    <div>
+        <h2>{{companyName}}</h2>
+		<br/>
+    </div>
+  
+<div ng-repeat="work in work_experience"> 
+<div class="panel panel-default">
+  <div class="panel-heading"><b>{{work.title}}</b></div>
+  <div class="panel-body">
+  <b>From:</b> {{work.start_date}} - {{work.end_date}}<br/>  
+  <b>Description: </b> <div ng-bind-html="trustAsHtml(work.description)"></div> <!-- http://stackoverflow.com/questions/28867199/angular-ng-bind-html-inside-a-nested-ng-repeat -->
+	<div ng-if="work.slides">
+	 <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" id="basket-carousel">
+      <div uib-slide ng-repeat="slide in work.slides track by slide.id" index="slide.id">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+			<p id="carousel-heading"><b>{{slide.text}}</b></p>
+		</div>
+      </div>
+    </div>
+	</div>
+  </div>
+</div>
+
+</div>
+	 
+</html>

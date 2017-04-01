@@ -1,0 +1,104 @@
+<!-- contact.html -->
+    <div class="text-center">
+        <h1>Contact Page</h1>
+
+		<img src="images/profile.png" alt="profile_picture" class="img-responsive img-circle profile-img"/>
+		<p>Adam Letch<br />
+		Junior Software Engineer<br />
+		<a href="tel:+447821222933"><i class="fa fa-phone" aria-hidden="true"></i> +44 7821 222933</a> <br />
+		<a href="mailto:aletc002@gold.ac.uk"><i class="fa fa-envelope-o" aria-hidden="true"></i> aletc002@gold.ac.uk</a>
+		</p>
+<!--        <p>{{ message }}</p>-->
+
+		<form name="contactForm" novalidate>
+			<div class="form-group" show-errors>
+				<div class="row">
+					<div class="col-xs-12"> 
+						<div class="input-group">
+						  <span class="input-group-addon glyphicon glyphicon-user" id="basic-addon1"></span>
+						  <input type="text" class="form-control" name="name" ng-model="contact.name" placeholder="Name" aria-describedby="basic-addon1" required>		  
+						</div>
+						<div ng-messages="contactForm.name.$error" ng-if="contactForm.name.$touched || contactForm.$submitted">
+							<p class="help-block" ng-message="required">Your name is required.</p>
+						</div>
+						</div><!--/col-->
+					</div><!--/row-->
+			</div><!--/form-group-->
+			
+			<div class="form-group" show-errors>		
+				<div class="row">
+					<div class="col-xs-12"> 
+						<div class="input-group">
+						  <span class="input-group-addon glyphicon glyphicon-phone-alt" id="basic-addon1"></span>
+						  <input type="text" class="form-control" name="phone" ng-model="contact.phone" placeholder="Phone" aria-describedby="basic-addon1" ng-minlength="phone_minlength" 
+										ng-maxlength="phone_maxlength" required>		  
+						</div>
+						<div ng-messages="contactForm.phone.$error" ng-if="contactForm.phone.$touched || contactForm.$submitted">
+							<p class="help-block" ng-message="required">Your phone number is required.</p>
+							<p class="help-block" ng-message="minlength">Your phone number should be at least {{phone_minlength}} characters long. Current length: {{contactForm.phone.$viewValue.length}}</p>
+							<p class="help-block" ng-message="maxlength">Your phone number should be less than {{phone_maxlength}} characters long. Current length: {{contactForm.phone.$viewValue.length}}.</p>							
+						</div>
+						</div><!--/col-->
+					</div><!--/row-->	
+				</div><!--/form-group-->
+			
+			<div class="form-group" show-errors>	
+				<div class="row">
+					<div class="col-xs-12"> 
+						<div class="input-group">
+						  <span class="input-group-addon glyphicon glyphicon-envelope" id="basic-addon1"></span>
+						  <input type="email" class="form-control" name="email" ng-model="contact.email" placeholder="Email" aria-describedby="basic-addon1" required>		  
+						</div>
+						<div ng-messages="contactForm.email.$error" ng-if="contactForm.email.$touched || contactForm.$submitted">
+							<p class="help-block" ng-message="required">Your email is required.</p>
+							<p class="help-block" ng-message="email">This needs to be a valid email.</p>
+						</div>					
+					</div><!--/col-->
+				</div><!--/row-->
+			</div><!--/form-group-->
+
+			<div class="form-group" show-errors>	
+				<div class="row">
+					<div class="col-xs-12"> 
+						<div class="input-group">
+						  <span class="input-group-addon glyphicon glyphicon-globe" id="basic-addon1"></span>
+						  <input type="text" class="form-control" name="website" ng-model="contact.website" placeholder="Website" aria-describedby="basic-addon1" ng-minlength="website_minlength" 
+										ng-maxlength="website_maxlength" required>		  
+						</div>
+						<div ng-messages="contactForm.website.$error" ng-if="contactForm.website.$touched || contactForm.$submitted">
+							<p class="help-block" ng-message="required">Your website is required.</p>
+							<p class="help-block" ng-message="minlength">Your website should be at least {{website_minlength}} characters long. Current length: {{contactForm.website.$viewValue.length}}</p>
+							<p class="help-block" ng-message="maxlength">Your website should be less than {{website_maxlength}} characters long. Current length: {{contactForm.website.$viewValue.length}}.</p>											
+						</div>					
+					</div><!--/col-->
+				</div><!--/row-->
+			</div><!--/form-group-->
+				
+			<div class="form-group" show-errors>	
+				<div class="row">
+					<div class="col-xs-12"> 					
+						<div class="input-group">
+							<span class="input-group-addon glyphicon glyphicon-pencil"></span>			
+							<textarea class="form-control" ng-model="contact.message" id="message" name="message" placeholder="Message" ng-minlength="message_minlength" ng-maxlength="message_maxlength" required></textarea>   						
+						</div>						
+						<div ng-messages="contactForm.message.$error" ng-if="contactForm.message.$touched || contactForm.$submitted">
+							<p class="help-block" ng-message="required">Your message is required.</p>
+							<p class="help-block" ng-message="minlength">Your message should be at least {{message_minlength}} characters long. Current length: {{contactForm.message.$viewValue.length}}</p>
+							<p class="help-block" ng-message="maxlength">Your message should be less than {{message_maxlength}} characters long. Current length: {{contactForm.message.$viewValue.length}}.</p>											
+
+						</div>						
+					</div><!--/col-->
+				</div><!--/row-->
+			</div><!--/form-group-->				
+				
+				<div class="row">
+					<div class="col-xs-12"> 			
+						<button id="submitbtn" type="submit" class="btn btn-primary" ng-click="save()">Submit</button>	
+					</div><!--/col-->
+				</div><!--/row-->
+		</form>
+	</div>	
+	
+	<!--
+	name,phone,email,website,message http://studioschurk.nl/#contactus
+	-->
